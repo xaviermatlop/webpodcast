@@ -53,7 +53,7 @@ export default function Contact() {
 
         {sent ? (
           <div className="success" role="alert">
-            ✅ ¡Mensaje enviado! Gracias por escribirnos, te responderemos pronto.
+            ¡Mensaje enviado! Gracias por escribirnos, te responderemos pronto.
           </div>
         ) : (
           <form

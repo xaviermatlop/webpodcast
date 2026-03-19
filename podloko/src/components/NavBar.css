@@ -1,41 +1,44 @@
-.nav {
+.navbar {
   position: sticky; top: 0; z-index: 100;
-  background: var(--ink);
-  border-bottom: 3px solid var(--accent);
+  background-color: var(--accent);
+  border-bottom: 4px solid var(--gold);
   display: flex; align-items: center; justify-content: space-between;
-  padding: .75rem 2rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.brand {
+.logo {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  color: var(--white);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.navbar nav {
+  display: flex; gap: 1.5rem;
+}
+
+.navbar nav a {
   color: var(--paper);
-  letter-spacing: .04em;
-  font-weight: 900;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
-.brand span { color: var(--gold); }
-
-.links {
-  display: flex; gap: 1.5rem; list-style: none;
-}
-
-.links a {
-  color: var(--cream);
-  font-size: .875rem; text-decoration: none;
-  font-weight: 500; letter-spacing: .05em; text-transform: uppercase;
-  transition: color .2s;
-}
-
-.links a:hover,
-.links a:focus {
+.navbar nav a:hover {
   color: var(--gold);
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
+  border-bottom: 2px solid var(--gold);
 }
 
 @media (max-width: 600px) {
-  .nav { padding: .6rem 1rem; }
-  .links { gap: .75rem; }
-  .links a { font-size: .75rem; }
+  .navbar { padding: 0.8rem 1rem; }
+  .logo { font-size: 1.4rem; }
+  .navbar nav { gap: 0.8rem; }
+  .navbar nav a { font-size: 0.9rem; }
 }

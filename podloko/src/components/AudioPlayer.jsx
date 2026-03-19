@@ -88,7 +88,7 @@ export default function AudioPlayer({ episode }) {
             </div>
 
             <div className="volumeWrap">
-              <label htmlFor="vol">🔉</label>
+              <label htmlFor="vol">Vol</label>
               <input
                 id="vol"
                 type="range"
@@ -102,7 +102,7 @@ export default function AudioPlayer({ episode }) {
           </div>
         </>
       ) : (
-        <p className="soon">🎙️ Este episodio estará disponible pronto.</p>
+        <p className="soon">Este episodio estará disponible pronto.</p>
       )}
     </div>
   )

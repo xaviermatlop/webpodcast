@@ -33,17 +33,17 @@ export default function Quiz() {
     return (
       <div className="wrap" role="region" aria-label="Resultado del juego">
         <div className="header">
-          <span>🎙️ Trivia PodLoko</span>
+          <span>Trivia Bíblica</span>
           <span className="score">Final: {score}/{QUIZ_QUESTIONS.length}</span>
         </div>
         <div className="final">
           <div className="bigScore">{score}/{QUIZ_QUESTIONS.length}</div>
           <p>
             {score === QUIZ_QUESTIONS.length
-              ? '¡Perfecto! Eres un experto en audio y vídeo web. 🏆'
+              ? '¡Perfecto! Tienes un excelente conocimiento de tu fe.'
               : score >= 3
-              ? '¡Bien hecho! Repasa los temas donde fallaste. 👏'
-              : 'Sigue escuchando el podcast y vuelve a intentarlo. 💪'}
+              ? '¡Bien hecho! Sigue profundizando en las Escrituras.'
+              : 'Sigue escuchando el podcast y aprendiendo cada día más.'}
           </p>
           <button className="btnRestart" onClick={restart}>
             Volver a jugar
@@ -56,7 +56,7 @@ export default function Quiz() {
   return (
     <div className="wrap" role="region" aria-label="Juego de trivia sobre el podcast">
       <div className="header">
-        <span>🎙️ Trivia PodLoko</span>
+        <span>TRIVIAL SOBRE CRISTO REDENTOR ;)</span>
         <span className="score">
           {idx + 1}/{QUIZ_QUESTIONS.length} · Puntos: {score}
         </span>
@@ -92,7 +92,7 @@ export default function Quiz() {
               className={`feedback ${selected === q.correct ? 'feedOk' : 'feedErr'}`}
               role="alert"
             >
-              {selected === q.correct ? '✅ ¡Correcto! ' : '❌ Incorrecto. '}
+              {selected === q.correct ? '¡Correcto! ' : 'Incorrecto. '}
               {q.explanation}
             </div>
             <button className="btnNext" onClick={next}>

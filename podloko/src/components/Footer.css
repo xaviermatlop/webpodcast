@@ -1,11 +1,12 @@
 .footer {
   background: var(--ink);
-  color: #888;
+  color: var(--cream);
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: .8rem;
-  border-top: 3px solid var(--accent);
+  padding: 3rem 1rem;
+  font-size: 1.1rem;
+  border-top: 4px solid var(--gold);
   line-height: 1.8;
+  font-family: var(--font-body);
 }
 
 .footer a {
@@ -21,7 +22,7 @@
 }
 
 .sub {
-  margin-top: .35rem;
-  font-size: .75rem;
-  color: #555;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #888;
 }

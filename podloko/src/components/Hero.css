@@ -1,86 +1,96 @@
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  max-width: var(--max-w-wide);
-  margin: 0 auto;
-  padding: 5rem 2rem 4rem;
-  color: var(--paper);
-}
-
-.tag {
-  display: inline-block;
-  font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--gold); border: 1px solid var(--gold);
-  padding: .25rem .75rem; border-radius: 2px; margin-bottom: 1rem;
-}
-
-.h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
-  line-height: 1.1; font-weight: 900;
-}
-
-.h1 em { color: var(--accent); font-style: italic; }
-
-.desc {
-  margin-top: 1.25rem;
-  color: #b8b2a8; font-size: 1.05rem; max-width: 42ch;
-}
-
-.cta {
-  display: inline-block; margin-top: 2rem;
-  background: var(--accent); color: #fff;
-  padding: .75rem 1.75rem; border-radius: var(--radius);
-  text-decoration: none; font-weight: 500;
-  transition: background .2s, transform .15s;
-}
-
-.cta:hover, .cta:focus {
-  background: #a83620; transform: translateY(-2px);
-  outline: 3px solid var(--gold); outline-offset: 3px;
-}
-
-/* cover art */
-.cover {
-  justify-self: center;
-  aspect-ratio: 1; max-width: 300px; width: 100%;
-  border: 3px solid var(--border); border-radius: var(--radius);
-  display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, #1a1916 0%, #2e2c28 100%);
-  position: relative; overflow: hidden;
-}
-
-.cover::before {
-  content: ''; position: absolute; inset: 0;
-  background: repeating-linear-gradient(
-    -45deg, transparent, transparent 6px,
-    rgba(212,168,67,.07) 6px, rgba(212,168,67,.07) 7px
+  text-align: center;
+  padding: 6rem 2rem;
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--cream) 0,
+    var(--cream) 2px,
+    transparent 2px,
+    transparent 8px
   );
+  border-bottom: 3px solid var(--gold);
 }
 
-.coverInner {
-  text-align: center; z-index: 1; padding: 2rem;
-}
-
-.coverIcon { font-size: 4rem; line-height: 1; }
-
-.coverTitle {
+.hero-title {
   font-family: var(--font-display);
-  font-size: 1.2rem; color: var(--gold);
-  margin-top: .75rem; letter-spacing: .05em;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  letter-spacing: 0.02em;
 }
 
-.coverEp {
-  font-size: .72rem; color: #888; margin-top: .4rem;
-  letter-spacing: .1em; text-transform: uppercase;
+.hero-desc {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  color: var(--ink);
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 3rem 1.25rem 2.5rem;
-  }
-  .cover { max-width: 220px; margin: 0 auto; }
+.hero-latest {
+  background: var(--white);
+  border: 2px solid var(--border);
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.hero-latest h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+.hero-latest audio {
+  width: 100%;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  font-family: var(--font-display);
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--white);
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--paper);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent);
+  color: var(--white);
 }
