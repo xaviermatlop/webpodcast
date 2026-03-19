@@ -1,0 +1,72 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Design tokens ── */
+:root {
+  --ink:       #0e0d0c;
+  --paper:     #f5f0e8;
+  --cream:     #ede8dc;
+  --accent:    #c84b2f;
+  --gold:      #d4a843;
+  --muted:     #6b6560;
+  --border:    #d0c9be;
+  --white:     #ffffff;
+  --success:   #2d7a4f;
+  --radius:    4px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --max-w: 880px;
+  --max-w-wide: 1200px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute; top: -999px; left: 0;
+  padding: 8px 16px;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-body); font-size: .875rem;
+  z-index: 9999; border-radius: 0 0 4px 0;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Focus visible ── */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+:focus:not(:focus-visible) { outline: none; }
+
+/* ── Shared section layout ── */
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-label {
+  font-size: .7rem; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--accent); font-weight: 500; margin-bottom: .5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700; line-height: 1.2;
+}
+
+hr.divider {
+  border: none; border-top: 2px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ── Responsive helpers ── */
+@media (max-width: 600px) {
+  .section-inner { padding: 2.5rem 1.25rem; }
+}
