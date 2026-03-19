@@ -1,0 +1,91 @@
+.intro {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  max-width: 60ch;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: .5rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.tabBtn {
+  padding: .55rem 1.25rem;
+  background: none;
+  border: 2px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: .875rem;
+  font-weight: 500;
+  border-radius: var(--radius) var(--radius) 0 0;
+  color: var(--muted);
+  transition: background .15s, color .15s;
+  position: relative;
+  bottom: -2px;
+}
+
+.tabBtn:hover { color: var(--ink); }
+
+.tabBtn:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.tabActive {
+  background: var(--paper);
+  border-color: var(--border);
+  border-bottom-color: var(--paper);
+  color: var(--ink);
+}
+
+/* ── Panels ── */
+.panel {
+  padding-top: 1.5rem;
+}
+
+/* ── Video embed ── */
+.videoEmbed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* ── Placeholder ── */
+.placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1a1916 0%, #2e2c28 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--cream);
+  text-align: center;
+  padding: 2rem;
+}
+
+.placeholderIcon { font-size: 3.5rem; line-height: 1; }
+
+.placeholder p {
+  font-size: .9rem;
+  color: #888;
+  max-width: 40ch;
+  line-height: 1.6;
+}
+
+.placeholder code {
+  background: rgba(255,255,255,.1);
+  padding: .1em .4em;
+  border-radius: 3px;
+  font-size: .85em;
+}

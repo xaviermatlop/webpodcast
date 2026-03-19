@@ -1,0 +1,83 @@
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design tokens ── */
+:root {
+  --ink: #2b2118;
+  --paper: #fbf8f1;
+  --cream: #f2eedd;
+  --accent: #7a1b15;
+  --gold: #cc9933;
+  --muted: #7a6a5a;
+  --border: #d0c2ac;
+  --white: #ffffff;
+  --success: #2d7a4f;
+  --radius: 8px;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-body: "EB Garamond", system-ui, serif;
+  --max-w: 880px;
+  --max-w-wide: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Shared section layout ── */
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+hr.divider {
+  border: none;
+  border-top: 2px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ── Responsive helpers ── */
+@media (max-width: 600px) {
+  .section-inner {
+    padding: 2.5rem 1.25rem;
+  }
+}

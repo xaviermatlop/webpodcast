@@ -1,0 +1,90 @@
+.card {
+  background: var(--paper);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Add a pseudo-element for a double border effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  pointer-events: none;
+}
+
+.epTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 700;
+  margin-bottom: .5rem;
+  color: var(--accent);
+}
+
+.epMeta {
+  font-size: 1rem; color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex; align-items: center;
+  gap: 1.5rem; flex-wrap: wrap;
+  position: relative; /* ensure it stays above the pseudo-element border */
+  z-index: 2;
+}
+
+.playBtn {
+  width: 65px; height: 65px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--gold); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: #fff; flex-shrink: 0;
+  transition: all 0.2s ease;
+  font-family: var(--font-display);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.playBtn:hover, .playBtn:focus {
+  background: var(--ink); transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  outline: none;
+  border-color: var(--paper);
+}
+
+.progressWrap { flex: 1; min-width: 160px; position: relative; z-index: 2;}
+
+.progressBar {
+  width: 100%; height: 8px; border-radius: 4px;
+  background: var(--border); cursor: pointer;
+  appearance: none; accent-color: var(--accent);
+}
+
+.timeRow {
+  display: flex; justify-content: space-between;
+  font-size: .9rem; color: var(--ink); margin-top: .5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.volumeWrap {
+  display: flex; align-items: center; gap: .5rem;
+  position: relative; z-index: 2;
+}
+
+.volumeWrap label { font-size: .95rem; font-weight: bold; color: var(--accent); }
+
+.volumeSlider {
+  width: 90px; height: 6px; border-radius: 3px;
+  accent-color: var(--accent); cursor: pointer;
+}
+
+.soon {
+  color: var(--muted); font-style: italic; margin-top: .75rem;
+  font-family: var(--font-display);
+  position: relative; z-index: 2;
+}
