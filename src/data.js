@@ -2,14 +2,14 @@ export const EPISODES = [
   {
     id: 1,
     title:
-      "Ep. 1 — Cristo Redentor, el cani supremo del cielo, ¡qué lokuraa, primo!",
+      "Ep.1 — Cristo Redentor, el cani supremo del cielo, ¡qué lokuraa, primo!",
     duration: "~20 min",
     src: "/audio/Cristo-Redentor_-el-cani-supremo-del-cielo_-¡qué-lokuraa_-primo_.mp3",
     desc: "Un análisis profundo de las Bienaventuranzas y su significado para la vida moderna.",
   },
   {
     id: 2,
-    title: "Ep. 2 — Próximamente",
+    title: "Ep.2 — Próximamente",
     duration: "—",
     src: null,
     desc: "Nuevo episodio en producción. ¡Suscríbete para no perdértelo!",
