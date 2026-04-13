@@ -1,0 +1,90 @@
+.wrap {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.header {
+  background: var(--ink); color: var(--paper);
+  padding: .75rem 1.25rem;
+  font-family: var(--font-display); font-size: 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.score { font-size: .875rem; color: var(--gold); }
+
+.area { padding: 1.5rem; }
+
+.question {
+  font-size: 1rem; font-weight: 500; margin-bottom: 1.25rem;
+}
+
+.options {
+  display: flex; flex-direction: column; gap: .6rem;
+}
+
+.opt {
+  background: var(--white);
+  border: 2px solid var(--border);
+  padding: .65rem 1rem; border-radius: var(--radius);
+  cursor: pointer; font-family: var(--font-body); font-size: .9rem;
+  text-align: left; transition: border-color .15s, background .15s;
+}
+
+.opt:hover:not(:disabled), .opt:focus:not(:disabled) {
+  border-color: var(--accent); background: #fdf6f4;
+  outline: none;
+}
+
+.opt:disabled { cursor: default; }
+
+.correct { border-color: #2d7a4f !important; background: #edfaf3 !important; }
+.wrong   { border-color: var(--accent) !important; background: #fdf2f0 !important; }
+
+.feedback {
+  margin-top: 1rem; padding: .75rem 1rem;
+  border-radius: var(--radius); font-size: .875rem; font-weight: 500;
+  line-height: 1.5;
+}
+
+.feedOk  { background: #edfaf3; color: #2d7a4f; border: 1px solid #a8e0c2; }
+.feedErr { background: #fdf2f0; color: var(--accent); border: 1px solid #f0b8ad; }
+
+.btnNext {
+  margin-top: 1rem;
+  background: var(--ink); color: var(--paper);
+  border: none; padding: .6rem 1.5rem; border-radius: var(--radius);
+  cursor: pointer; font-family: var(--font-body); font-weight: 500;
+  transition: background .2s;
+}
+
+.btnNext:hover, .btnNext:focus {
+  background: var(--accent);
+  outline: 3px solid var(--gold); outline-offset: 3px;
+}
+
+/* final screen */
+.final {
+  text-align: center; padding: 2.5rem 1rem;
+}
+
+.bigScore {
+  font-family: var(--font-display);
+  font-size: 3rem; color: var(--accent); font-weight: 900;
+}
+
+.final p { color: var(--muted); margin-top: .75rem; font-size: .95rem; }
+
+.btnRestart {
+  margin-top: 1.5rem;
+  background: var(--accent); color: var(--white);
+  border: none; padding: .65rem 1.75rem; border-radius: var(--radius);
+  cursor: pointer; font-family: var(--font-body); font-weight: 500;
+  transition: background .2s;
+}
+
+.btnRestart:hover, .btnRestart:focus {
+  background: #a83620;
+  outline: 3px solid var(--gold); outline-offset: 3px;
+}
