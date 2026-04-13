@@ -1,6 +1,0 @@
-Pon aquí tus archivos de audio:
-  - episodio1.mp3  (episodio principal)
-  - episodio2.mp3  (cuando lo tengas)
-
-Formato recomendado: MP3 128–192 kbps
-Herramientas de exportación: Audacity, FFmpeg

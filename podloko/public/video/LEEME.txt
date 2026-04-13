@@ -1,7 +1,0 @@
-Pon aquí tus archivos de vídeo:
-  - promo.mp4   (vídeo promocional, H.264 + AAC)
-  - promo.webm  (alternativa WebM, opcional)
-  - poster.jpg  (imagen de vista previa del vídeo)
-  - subtitulos.vtt  (subtítulos en formato WebVTT)
-
-Herramientas recomendadas: HandBrake, FFmpeg, CapCut
