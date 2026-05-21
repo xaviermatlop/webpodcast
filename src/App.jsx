@@ -8,6 +8,7 @@ import Footer      from './components/Footer'
 export default function App() {
   return (
     <>
+      <a href="#main" className="skip-link">Saltar al contenido principal</a>
       <NavBar />
       <main id="main">
         <section

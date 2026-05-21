@@ -4,7 +4,7 @@ import AudioPlayer from './AudioPlayer'
 import './Episodes.css'
 
 export default function Episodes() {
-  const [active, setActive]             = useState(0)
+  const [active, setActive] = useState(0)
   const [showTranscript, setShowTranscript] = useState(false)
 
   return (
